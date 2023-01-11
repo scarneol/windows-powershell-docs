@@ -53,7 +53,7 @@ The cmdlet validates the current computer for one of the following web applicati
 
 ### Example 1: Check prerequisites and validate parameters for Administration and Monitoring Website
 ```
-PS C:\> Test-MbamWebApplication -AdministrationPortal -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -AdvancedHelpdeskAccessGroup "Contoso\AdvancedUserGroup" -HelpdeskAccessGroup "Contoso\StandardUserGroup" -ReportsReadOnlyAccessGroup "Contoso\ReportUserGroup" -ReportUrl "https://ContosoReportServer/ReportServer" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalComputer\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689)
+PS C:\> Test-MbamWebApplication -AdministrationPortal -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -AdvancedHelpdeskAccessGroup "Contoso\AdvancedUserGroup" -HelpdeskAccessGroup "Contoso\StandardUserGroup" -ReportsReadOnlyAccessGroup "Contoso\ReportUserGroup" -ReportUrl "https://ContosoReportServer/ReportServer" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalMachine\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689)
 True
 ```
 
@@ -62,7 +62,7 @@ The command tests a configuration of the website that uses the Compliance and Au
 
 ### Example 2: Check prerequisites and validate parameters for Self-Service Portal
 ```
-PS C:\> Test-MbamWebApplication -SelfServicePortal -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalComputer\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689) 
+PS C:\> Test-MbamWebApplication -SelfServicePortal -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalMachine\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689) 
 True
 ```
 
@@ -71,7 +71,7 @@ The command checks the configuration of the Portal that uses the Compliance and 
 
 ### Example 3: Check prerequisites and validate parameters for Agent Services
 ```
-PS C:\> Test-MbamWebApplication -AgentService -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalComputer\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689) 
+PS C:\> Test-MbamWebApplication -AgentService -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalMachine\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689) 
 True
 ```
 
@@ -80,7 +80,7 @@ The cmdlets verify a configuration of services that uses the Compliance and Audi
 
 ### Example 4: View detailed information
 ```
-PS C:\> Test-MbamWebApplication -AdministrationPortal -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -AdvancedHelpdeskAccessGroup "Contoso\AdvancedUserGroup" -HelpdeskAccessGroup "Contoso\StandardUserGroup" -ReportsReadOnlyAccessGroup "Contoso\ReportUserGroup" -ReportUrl "https://ContosoReportServer/ReportServer" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalComputer\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689) -Detailed
+PS C:\> Test-MbamWebApplication -AdministrationPortal -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -AdvancedHelpdeskAccessGroup "Contoso\AdvancedUserGroup" -HelpdeskAccessGroup "Contoso\StandardUserGroup" -ReportsReadOnlyAccessGroup "Contoso\ReportUserGroup" -ReportUrl "https://ContosoReportServer/ReportServer" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalMachine\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689) -Detailed
 Type    Message
 ----    -------
 Error   Parameter "ComplianceAndAuditDBConnectionString" using value "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" is ...
